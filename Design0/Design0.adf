@@ -30,25 +30,30 @@ UCF=
 SortInfo=u
 HierarchyInformation=register_file_tb|behavioral|0
 
+[ORDER]
+Synchronize=1
+
 [Files]
 /ALU.vhd=-1
-/shifter.vhd=-1
 /non_linear_lookup.vhd=-1
 /register.vhd=-1
 /CLU.vhd=-1
 /crypto_coprocessor.vhd=-1
 /non_linear_lookup_TB.vhd=-1
+/shifter.vhd=-1
+/shifter_TB.vhd=-1
 /register_file_TB.vhd=-1
 work/work.lib=-1
 
 [Files.Data]
 .\src\ALU.vhd=VHDL Source Code
-.\src\shifter.vhd=VHDL Source Code
 .\src\non_linear_lookup.vhd=VHDL Source Code
 .\src\register.vhd=VHDL Source Code
 .\src\CLU.vhd=VHDL Source Code
 .\src\crypto_coprocessor.vhd=VHDL Source Code
 .\src\non_linear_lookup_TB.vhd=VHDL Source Code
+.\src\shifter.vhd=VHDL Source Code
+.\src\shifter_TB.vhd=VHDL Source Code
 .\src\register_file_TB.vhd=VHDL Source Code
 .\src\work\work.lib=External File
 
