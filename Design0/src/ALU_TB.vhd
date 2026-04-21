@@ -21,42 +21,42 @@ begin
         -- Let's add 5 + 3 (in Hex: 0x0005 + 0x0003)
         ABUS    <= x"0505";
         BBUS    <= x"0503";
-        ALUctrl <= "0000";
+        ALUctrl <= "001";
         wait for 10 ns;
         -- Test 2: SUB Operation (0001)
         ABUS    <= x"0505";
         BBUS    <= x"0503";
-        ALUctrl <= "0001";
+        ALUctrl <= "010";
         wait for 10 ns;
 
         -- Test 3 : AND Operation (0010)
         ABUS    <= x"0505";
         BBUS    <= x"0503";
-        ALUctrl <= "0010";
+        ALUctrl <= "011";
         wait for 10 ns;
 
         --Test 4 : OR Operation (0011)
         ABUS    <= x"0505";
         BBUS    <= x"0503";
-        ALUctrl <= "0011";
+        ALUctrl <= "100";
         wait for 10 ns;
 
         --Test 5 : XOR Operation (0100)
         ABUS    <= x"0505";
         BBUS    <= x"0503";
-        ALUctrl <= "0100";
+        ALUctrl <= "101";
         wait for 10 ns;
 
         --Test 6 : NOT Operation (0101)
         ABUS    <= x"0505";
         BBUS    <= x"0503";
-        ALUctrl <= "0101";
+        ALUctrl <= "110";
         wait for 10 ns;
 
         --Test 7 : MOV (0110)
         ABUS    <= x"0505";
         BBUS    <= x"0503";
-        ALUctrl <= "0110";
+        ALUctrl <= "111";
         wait for 10 ns;
 
         wait;
