@@ -29,8 +29,6 @@ UCF=
 [HierarchyViewer]
 SortInfo=u
 HierarchyInformation=register_file_tb|behavioral|0
-ShowHide=ShowTopLevel
-Selected=
 
 [Files]
 /ALU.vhd=-1
