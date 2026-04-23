@@ -2,31 +2,43 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
--- Register File
--- 16x16 bit synchronous read/write
-
 entity register_file is
-    port (
-        clock  : in  std_logic;
-        reset  : in  std_logic;
-        RdWEn  : in  std_logic;
-        RES    : in  std_logic_vector(15 downto 0);
-        Ra     : in  std_logic_vector(3 downto 0);
-        Rb     : in  std_logic_vector(3 downto 0);
-        Rd     : in  std_logic_vector(3 downto 0);
-        SRCa   : out std_logic_vector(15 downto 0);
-        SRCb   : out std_logic_vector(15 downto 0)
+    Port ( 
+        clock : in  STD_LOGIC;
+        reset : in  STD_LOGIC;
+        RdWEn : in  STD_LOGIC;
+        RES   : in  STD_LOGIC_VECTOR (15 downto 0);
+        Ra    : in  STD_LOGIC_VECTOR (3 downto 0);
+        Rb    : in  STD_LOGIC_VECTOR (3 downto 0);
+        Rd    : in  STD_LOGIC_VECTOR (3 downto 0);
+        SRCa  : out STD_LOGIC_VECTOR (15 downto 0);
+        SRCb  : out STD_LOGIC_VECTOR (15 downto 0)
     );
-end entity register_file;
+end register_file;
 
-architecture rtl of register_file is
+architecture Behavioral of register_file is
 
-    type reg_array is array(0 to 15) of std_logic_vector(15 downto 0);
-    signal REG_FILE : reg_array;
+    type reg_array is array (0 to 15) of STD_LOGIC_VECTOR(15 downto 0);
+    signal registers : reg_array;
 
 begin
 
-    -- TODO: write process
-    -- TODO: read process
+    process(clock)
+    begin
+        if rising_edge(clock) then
+            if reset = '1' then
+                registers <= (others => (others => '0'));
+                SRCa      <= (others => '0');
+                SRCb      <= (others => '0');
+            else
+                SRCa <= registers(to_integer(unsigned(Ra)));
+                SRCb <= registers(to_integer(unsigned(Rb)));
+                
+                if RdWEn = '1' then
+                    registers(to_integer(unsigned(Rd))) <= RES;
+                end if;
+            end if;
+        end if;
+    end process;
 
-end architecture rtl;
+end Behavioral;

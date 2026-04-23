@@ -13,6 +13,7 @@
 *.set
 *.vcd
 *.cf
+*.do
 compilation.order
 synthesis.order
 
