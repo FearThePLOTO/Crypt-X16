@@ -5,7 +5,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity register_file_TB is
 end register_file_TB;
 
-architecture Behavioral of register_file_TB is
+architecture sim of register_file_TB is
 
     -- Component Declaration for the Unit Under Test (UUT)
     component register_file
@@ -103,4 +103,4 @@ begin
         wait; -- Stop simulation
     end process;
 
-end Behavioral;
+end architecture;
