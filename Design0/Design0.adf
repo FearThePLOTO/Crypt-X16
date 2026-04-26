@@ -60,20 +60,20 @@ Components=1
 TestBenches=1
 
 [Files]
+Components/Control_Logic.vhd=-1
 Components/ALU.vhd=-1
 Components/non_linear_lookup.vhd=-1
 Components/shifter.vhd=-1
 Components/MUX.vhd=-1
-Components/Control_Logic.vhd=-1
 Components/CLU.vhd=-1
 Components/register_file.vhd=-1
 Components/input_reg.vhd=-1
 Components/crypto_coprocessor.vhd=-1
+TestBenches/Control_Logic_TB.vhd=-1
 TestBenches/ALU_TB.vhd=-1
 TestBenches/non_linear_lookup_TB.vhd=-1
 TestBenches/shifter_TB.vhd=-1
 TestBenches/MUX_TB.vhd=-1
-TestBenches/Control_Logic_TB.vhd=-1
 TestBenches/CLU_TB.vhd=-1
 TestBenches/register_file_TB.vhd=-1
 TestBenches/input_reg_TB.vhd=-1

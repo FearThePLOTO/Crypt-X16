@@ -35,6 +35,7 @@ architecture rtl of crypto_coprocessor is
     -- Registered control signal (from input_register)
     signal CTRL_reg   : std_logic_vector(3 downto 0);
     signal RdWEn      : std_logic;
+	signal Rd_reg : std_logic_vector(3 downto 0);
 
     -- Data buses between register_file and CLU
     signal SRCa       : std_logic_vector(15 downto 0);
@@ -50,7 +51,9 @@ begin
             clock    => clock,
             reset    => reset,
             CTRL_IN  => CTRL_IN,
+			Rd_IN    => Rd_IN,
             CTRL_OUT => CTRL_reg,
+			Rd_OUT   => Rd_reg,
             RdWEn    => RdWEn
         );
 
@@ -64,7 +67,7 @@ begin
             RES   => CLU_RESULT,
             Ra    => Ra_IN,
             Rb    => Rb_IN,
-            Rd    => Rd_IN,
+            Rd    => Rd_reg,
             SRCa  => SRCa,
             SRCb  => SRCb
         );
