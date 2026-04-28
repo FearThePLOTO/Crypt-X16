@@ -28,36 +28,21 @@ UCF=
 
 [HierarchyViewer]
 SortInfo=u
-HierarchyInformation=crypto_coprocessor_tb|sim|0 register_file_tb|sim|0
+HierarchyInformation=clu|clu|0 clu_schematic|clu_schematic|0 clu_schematic_tb|sim|0 crypto_coprocessor|crypto_coprocessor|0 crypto_coprocessor_schematic|crypto_coprocessor_schematic|0 crypto_coprocessor_schematic_tb|sim|0 
 ShowHide=ShowTopLevel
 Selected=
 
 [ORDER]
 Synchronize=1
 
-[Files.Data]
-.\src\Components\ALU.vhd=VHDL Source Code
-.\src\Components\non_linear_lookup.vhd=VHDL Source Code
-.\src\Components\shifter.vhd=VHDL Source Code
-.\src\Components\MUX.vhd=VHDL Source Code
-.\src\Components\Control_Logic.vhd=VHDL Source Code
-.\src\Components\CLU.vhd=VHDL Source Code
-.\src\Components\register_file.vhd=VHDL Source Code
-.\src\Components\input_reg.vhd=VHDL Source Code
-.\src\Components\crypto_coprocessor.vhd=VHDL Source Code
-.\src\TestBenches\ALU_TB.vhd=VHDL Source Code
-.\src\TestBenches\CLU_TB.vhd=VHDL Source Code
-.\src\TestBenches\Control_Logic_TB.vhd=VHDL Source Code
-.\src\TestBenches\crypto_coprocessor_TB.vhd=VHDL Source Code
-.\src\TestBenches\input_reg_TB.vhd=VHDL Source Code
-.\src\TestBenches\MUX_TB.vhd=VHDL Source Code
-.\src\TestBenches\non_linear_lookup_TB.vhd=VHDL Source Code
-.\src\TestBenches\register_file_TB.vhd=VHDL Source Code
-.\src\TestBenches\shifter_TB.vhd=VHDL Source Code
-
 [Groups]
 Components=1
 TestBenches=1
+Schematics=1
+
+[file_out:Schematics/CLU_schematic.bde]
+Schematics/\compile\CLU_schematic.vhd=-1
+
 
 [Files]
 Components/Control_Logic.vhd=-1
@@ -69,6 +54,8 @@ Components/CLU.vhd=-1
 Components/register_file.vhd=-1
 Components/input_reg.vhd=-1
 Components/crypto_coprocessor.vhd=-1
+TestBenches/crypto_coprocessor_schematic_TB.vhd=-1
+TestBenches/CLU_schematic_TB.vhd=-1
 TestBenches/Control_Logic_TB.vhd=-1
 TestBenches/ALU_TB.vhd=-1
 TestBenches/non_linear_lookup_TB.vhd=-1
@@ -78,4 +65,33 @@ TestBenches/CLU_TB.vhd=-1
 TestBenches/register_file_TB.vhd=-1
 TestBenches/input_reg_TB.vhd=-1
 TestBenches/crypto_coprocessor_TB.vhd=-1
+Schematics/crypto_coprocessor_schematic.bde=-1
+Schematics/CLU_schematic.bde=-1
 
+[Files.Data]
+.\src\Components\Control_Logic.vhd=VHDL Source Code
+.\src\Components\ALU.vhd=VHDL Source Code
+.\src\Components\non_linear_lookup.vhd=VHDL Source Code
+.\src\Components\shifter.vhd=VHDL Source Code
+.\src\Components\MUX.vhd=VHDL Source Code
+.\src\Components\CLU.vhd=VHDL Source Code
+.\src\Components\register_file.vhd=VHDL Source Code
+.\src\Components\input_reg.vhd=VHDL Source Code
+.\src\Components\crypto_coprocessor.vhd=VHDL Source Code
+.\src\TestBenches\crypto_coprocessor_schematic_TB.vhd=VHDL Source Code
+.\src\TestBenches\CLU_schematic_TB.vhd=VHDL Source Code
+.\src\TestBenches\Control_Logic_TB.vhd=VHDL Source Code
+.\src\TestBenches\ALU_TB.vhd=VHDL Source Code
+.\src\TestBenches\non_linear_lookup_TB.vhd=VHDL Source Code
+.\src\TestBenches\shifter_TB.vhd=VHDL Source Code
+.\src\TestBenches\MUX_TB.vhd=VHDL Source Code
+.\src\TestBenches\CLU_TB.vhd=VHDL Source Code
+.\src\TestBenches\register_file_TB.vhd=VHDL Source Code
+.\src\TestBenches\input_reg_TB.vhd=VHDL Source Code
+.\src\TestBenches\crypto_coprocessor_TB.vhd=VHDL Source Code
+.\src\Schematics\crypto_coprocessor_schematic.bde=Block Diagram
+.\src\Schematics\CLU_schematic.bde=Block Diagram
+.\compile\crypto_coprocessor_schematic.vhd=VHDL Source Code
+
+[file_out:Schematics/crypto_coprocessor_schematic.bde]
+Schematics/\compile\crypto_coprocessor_schematic.vhd=-1
