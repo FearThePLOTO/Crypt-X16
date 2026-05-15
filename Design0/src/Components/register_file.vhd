@@ -28,20 +28,21 @@ architecture rtl of register_file is
         12 => x"C000", 13 => x"C902", 14 => x"100B", 15 => x"B000"
     );
 
-    signal registers : reg_array := INITIAL_STATE;
 begin
     process(clock)
+    variable var_registers : reg_array := INITIAL_STATE;
     begin
         if rising_edge(clock) then
             if reset = '1' then
-                registers <= INITIAL_STATE;
+                var_registers := INITIAL_STATE;
             elsif RdWEn = '1' then
-                registers(to_integer(unsigned(Rd))) <= RES;
+                var_registers(to_integer(unsigned(Rd))) := RES;
             end if;
+            SRCa <= var_registers(to_integer(unsigned(Ra)));
+            SRCb <= var_registers(to_integer(unsigned(Rb)));
         end if;
+
     end process;
 
-    SRCa <= registers(to_integer(unsigned(Ra)));
-    SRCb <= registers(to_integer(unsigned(Rb)));
 
 end architecture;
